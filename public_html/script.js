@@ -11,6 +11,21 @@ $('document').ready(function() {
     $('h1').bind('click', mouseClick);
 });
 
+$('#replaceWText').bind('click', replaceWText);
+
+$('#randPara').bind('click', addAPara);
+
+$('#removePara').bind('click',removeAPara);
+
+function removeAPara() {
+    $('#randPara p:list').remove();
+}
+function addAPara() {
+    $('#randPara').append('<p>ADDED</p>');
+}
+function replaceWText() {
+    $('#replaceWText').text('Replaced!');
+}
 function mouseOverMe() {
     $("p").html("blah");
 }
@@ -28,15 +43,17 @@ function resizedWindow()
     $("#second").html("Window was resized W: " + $("window").width() + " H: + ");
     $(("window").height());
 }
-$("document").ready(function(){
-$('#hideLogo').bind('click', hideTheImage);
-        $('#showLogo').bind('click', showTheImage);
-        });
-        
-function hideTheImage(){
-    $('#logo').hide('explode',{}, 2500);
-}
+//<script type="text/javascript">
 
-function showTheImage() {
-    $('#logo').show('fold', {}, 2500);
-}
+//$("document").ready(function() {
+//    $('#hideLogo').bind('click', hideTheImage);
+//    $('#showLogo').bind('click', showTheImage);
+//});
+//
+//function hideTheImage() {
+//    $('#logo').hide('explode', {}, 2500);
+//}
+//
+//function showTheImage() {
+//    $('#logo').show('fold', {}, 2500);
+//}
