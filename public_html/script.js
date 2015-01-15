@@ -2,7 +2,7 @@ $("document").ready(function() {
     $(".test").css("background-color", "blue");
     $('p:first').css({"background-color": "red", "color": "white"});
 
-    $('p:last').css({"background-color": "black", "color": "white"});
+    //$('p:last').css({"background-color": "black", "color": "white"});
 });
 
 $('document').ready(function() {
@@ -12,15 +12,16 @@ $('document').ready(function() {
 
     $('#replaceWText').bind('click', replaceWText);
 
-    $('#randPara').bind('click', addAPara);
+   $('#randPara').bind('click', addAPara);
 
     $('#removePara').bind('click', removeAPara);
+  $('#show').css('visibility', 'hidden');
 
-    $('#show').css('visibility', 'hidden');
+ $('#hide').bind('click', hideThePage);
 
-    $('#hide').bind('click', hideThePage);
-
-    $('#show').bind('click', showThePage);
+  $('#show').bind('click', showThePage);
+    
+    $('#superHumans').accordion({header:"h3"});
 });
 function hideThePage() {
     $('#show').css('visibility', 'visible');
@@ -34,6 +35,7 @@ function showThePage() {
 function removeAPara() {
     $('#randPara p:list').remove();
 }
+ 
 function addAPara() {
     $('#randPara').append('<p>ADDED</p>');
 }
