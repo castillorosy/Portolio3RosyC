@@ -43,14 +43,16 @@ function replaceWText() {
     $('#replaceWText').text('Replaced!');
 }
 function mouseOverMe() {
-//    $("p").html("blah");
+  $("p").html("blah");
 }
 function mouseOutMe() {
     $('h1').html("what's up?");
 }
 
 function mouseClick() {
-    $('p').html('ugh');
+  $('p').html('tf');
+  $('p').html('wtf');
+  $('p').html('asf');
 }
 $("window").resize(resizedWindow);
 
